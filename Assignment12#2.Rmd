@@ -1,0 +1,47 @@
+---
+title: "Assignment12"
+author: "Trevon Brown"
+date: "2026-11-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+R markdown is a file format for makink more dynamic documents with R rather than just a plain blank doument.R markdown allows you to combine narrative text, coding, and high quality output into one report.
+# Narrative Overview
+when working with data, documenting the workflowis just as important as getting the results.Using R markdown bridges the gap and allows you to combine them both into one proffesional documentation.
+Here is an inline equation for network density:
+$\alpha + \beta = \gamma$
+
+Here is a displayed equation
+$$\hat{y} = \beta_0 + \beta_1x+\epsilon$$
+
+# Load a library or dataset
+
+```{r cars}
+library(ggplot2)
+data(mtcars)
+summary(mtcars[,c ("mpg","wt")])
+```
+
+## Run simple analysis
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+
+# Plot network using ggplot2
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+geom_point(color = "darkblue", size = 3) +
+geom_smooth(method = "lm", se = FALSE, color = "red") +
+theme_minimal() +
+labs(
+title = "Fuel Efficiency vs. Car Weight",
+x = "Weight (1,000 lbs)",
+y = "Miles Per Gallon (MPG)"
+)
+```
+
