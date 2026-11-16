@@ -31,9 +31,11 @@ summary(mtcars[,c ("mpg","wt")])
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
+
 
 # Plot network using ggplot2
+
+```{r]
 ggplot(mtcars, aes(x = wt, y = mpg)) +
 geom_point(color = "darkblue", size = 3) +
 geom_smooth(method = "lm", se = FALSE, color = "red") +
